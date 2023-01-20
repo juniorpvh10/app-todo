@@ -17,8 +17,8 @@ export class TodoListComponent implements DoCheck {
 
   ngDoCheck() {
 
-    this.taskList.sort( (first, last) => Number(first.checked) - Number(last.checked));
-
+    this.setLocalStorate();
+   
   }
 
   public setEmitTaskList(event: string){
@@ -57,5 +57,12 @@ export class TodoListComponent implements DoCheck {
 
     }
 
+  }
+
+  public setLocalStorate(){
+    if(this.taskList){
+      this.taskList.sort( (first, last) => Number(first.checked) - Number(last.checked));
+      localStorage.setItem("list", JSON.stringify(this.taskList))
+    }
   }
 }
