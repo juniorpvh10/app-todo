@@ -15,7 +15,6 @@ export class TodoInputAddItensComponent implements OnInit {
 
   ngOnInit(): void {
 
-
   }
 
   public submitItemTaskList(){
@@ -29,8 +28,6 @@ export class TodoInputAddItensComponent implements OnInit {
       this.addItemTaskList = "";
 
     }
-
-
   }
 
 }
